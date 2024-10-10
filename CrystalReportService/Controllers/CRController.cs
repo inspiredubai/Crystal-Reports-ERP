@@ -18,9 +18,11 @@ using CrystalDecisions.Web;
 using CrystalReportService.Reports;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using CrystalReportService.Filters;
 
 namespace CrystalReportService.Controllers
 {
+    //[AllowCrossSiteJson]
     [Route("api/[controller]")]    
     public class CRController :  ApiController
     {
