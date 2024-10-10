@@ -19,15 +19,18 @@ using CrystalReportService.Reports;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using CrystalReportService.Filters;
+using System.Web.Http.Cors;
 
 namespace CrystalReportService.Controllers
 {
-    [AllowCrossSiteJson]
+    //[AllowCrossSiteJson]
     [Route("api/[controller]")]    
     public class CRController :  ApiController
     {
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
+        //[EnanleCors(origins: "*", headers: "*", methods: "*")]
         [HttpPost]
-        [Route("api/cr/DynamicReportCall")]
+        [Route("api/cr/DynamicReportCall")]        
         public HttpResponseMessage DynamicReportCall(DynamicInput model)
         {
             var reportParams = new List<ReportGenerator.ReportParameter>();

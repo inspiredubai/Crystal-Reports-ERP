@@ -14,7 +14,7 @@ namespace CrystalReportService
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            config.EnableCors();
             // Enable attribute routing
             config.MapHttpAttributeRoutes();
 
