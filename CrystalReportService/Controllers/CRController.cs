@@ -22,7 +22,7 @@ using CrystalReportService.Filters;
 
 namespace CrystalReportService.Controllers
 {
-    //[AllowCrossSiteJson]
+    [AllowCrossSiteJson]
     [Route("api/[controller]")]    
     public class CRController :  ApiController
     {
