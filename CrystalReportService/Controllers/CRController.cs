@@ -24,7 +24,7 @@ namespace CrystalReportService.Controllers
     [Route("api/[controller]")]    
     public class CRController :  ApiController
     {
-        [HttpGet]
+        [HttpPost]
         [Route("api/cr/DynamicReportCall")]
         public HttpResponseMessage DynamicReportCall(DynamicInput model)
         {
@@ -46,7 +46,7 @@ namespace CrystalReportService.Controllers
             );
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("api/cr/sample")]
         public HttpResponseMessage GetSampleReport(inputmodel model)
         {
